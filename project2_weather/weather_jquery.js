@@ -6,7 +6,7 @@ let WeatherObject = {
 		}).done(function(response) {
 
             console.log(response)
-            //alert(response.coord.lat)
+
 
             let wdata = response
             let exdata = response.weather[0];
