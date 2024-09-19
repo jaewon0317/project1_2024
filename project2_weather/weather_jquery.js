@@ -2,8 +2,12 @@ let WeatherObject = {
 	getWeather: function() {
 		$.ajax({
 			type: "GET",
-			url: 'https://api.openweathermap.org/data/2.5/weather?q=Seoul&units=metric&appid=7d96bc5108f52b80e2d9075a369b9f35',
+			url: 'https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=7d96bc5108f52b80e2d9075a369b9f35',
 		}).done(function(response) {
+
+            console.log(response)
+            //alert(response.coord.lat)
+
             let wdata = response
             let exdata = response.weather[0];
         
