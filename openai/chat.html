@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT 개발</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src = chat.js></script>
+</head>
+<body>
+    <h1>고재원의 인공지능 놀이터</h1>
+
+    질문
+    <input id="question" type="text" placeholder="질문하세요">
+    <button class="btn" onclick="talk()">질문</button>
+    모델
+    <select id="model">
+      <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+      <option value="gpt-4o-mini" selected>gpt-4o-mini</option>
+      <option value="gpt-4">gpt-4</option>
+    </select>
+    <hr>
+    답변
+    <h4 id = ans></h4>
+
+
+</body>
+</html>
