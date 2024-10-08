@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <title>Document</title>
+    <title>ChatGPT 개발</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="chat.js"></script> <!-- 따옴표 추가 -->
 </head>
 <body>
+    <h1>고재원의 인공지능 놀이터</h1>
 
-    <div  class="container shadow mx-auto mt-5 p-5 w-70">
-        <h1>나의 할일 관리 - 고재원</h1>
-        <div class="input-group">
-            <input id="item" type="text" class = "form-control" placeholder="새로운 할일을 압력하세요.">
-            <button onclick = "addItem()" class="btn btn-info"> 새로 입력</button>
-        </div>
-        <ul id = "todolist" class = "list-group"></ul>
-    </div>
-    <script src="00todo.js"></script>
-</body>
-</html>
+    질문
+    <input id="question" type="text" placeholder="질문하세요">
+    <button class="btn" onclick="talk()">질문</button>
+    모델
+    <select id="model">
+      <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+      <option value="gpt-4o-mini" selected>gpt-4o-mini</option>
+      <option value="gpt-4">gpt-4</option>
+    </select>
+    <hr>
+    답변
+    <h4 id="ans"></h4>
